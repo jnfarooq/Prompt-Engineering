@@ -1,0 +1,19 @@
+use python and beautifulsoup read and parse a local index.html 
+
+find all div with class="sg-col-20-of-24 s-result-item s-asin sg-col-0-of-12 sg-col-16-of-20 sg-col s-widget-spacing-small sg-col-12-of-16"
+
+for each div from the above list, 
+
+try find img with class="s-image" then link=img.src
+except link=''
+
+try find span with class="a-size-medium a-color-base a-text-normal" then title=span.text
+except title=''
+
+try find span with class="a-icon-alt" then rating=span.text
+except rating=''
+
+try find span with class="a-price-whole" then price=span.text
+except price=''
+
+dump the link, title, rating and price into a data.json file. 
